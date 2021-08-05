@@ -166,8 +166,6 @@ resource "null_resource" "linuxn" {
     provisioner "remote-exec" {
      inline = [
       "sudo apt-get update -y" ,
-      "sudo apt-get install dos2unix" ,
-      "dos2unix master.sh" ,
       "chmod +x /home/guru/master.sh",
       "/home/guru/master.sh ",
      ]
@@ -191,8 +189,6 @@ resource "null_resource" "node2" {
     provisioner "remote-exec" {
      inline = [
       "sudo apt-get update -y" ,
-      "sudo apt-get install dos2unix",
-      "dos2unix node.sh",
       "chmod +x /home/guru/node.sh",
       "/home/guru/node.sh ",
      ]
